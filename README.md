@@ -1,7 +1,7 @@
 machine-learning-to-skynet
 =============
 
-Chrome extension that replaces occurrences of 'the machine learning' with 'Skynet'
+Chrome extension that replaces occurrences of the machine learning' with 'Skynet'
 
 [Direct download of crx file](https://github.com/scottsb/ml-to-skynet/blob/master/src.crx?raw=true)
 

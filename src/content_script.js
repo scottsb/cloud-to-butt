@@ -1,5 +1,3 @@
-walk(document.body);
-
 function walk(rootNode) {
     // Find all the text nodes in rootNode
     var walker = document.createTreeWalker(
@@ -17,13 +15,15 @@ function walk(rootNode) {
 }
 
 function handleText(textNode) {
-	var v = textNode.nodeValue;
+	textNode.nodeValue = replaceText(textNode.nodeValue);
+}
 
+function replaceText(v) {
 	v = v.replace(/\bMachine Learning\b/g, "Skynet");
 	v = v.replace(/\bMachine learning\b/g, "Skynet");
 	v = v.replace(/\bmachine learning\b/g, "Skynet");
 	
-	textNode.nodeValue = v;
+	return v;
 }
 
 // Returns true if a node should *not* be altered in any way
@@ -80,4 +80,6 @@ function walkAndObserve(doc) {
     }
 }
 
-walkAndObserve(document);
+if (! document.domain.match(/github.com$/) || ! document.location.pathname.match(/ml-to-skynet$/)) {
+	walkAndObserve(document);
+}
