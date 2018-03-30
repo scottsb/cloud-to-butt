@@ -10,4 +10,6 @@ Installation
 
 In Chrome, choose Window > Extensions.  Drag src.crx into the page that appears.
 
+Usage
+-----
 "Chrome with me if you want to live."
